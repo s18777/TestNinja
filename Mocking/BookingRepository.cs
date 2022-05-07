@@ -20,7 +20,6 @@ namespace TestNinja
                 unitOfWork.Query<Booking>()
                     .Where(
                         b => b.Status != "Cancelled");
-            //b.Id != booking.Id && 
 
             if (excludedBookingId.HasValue)
                 bookings = bookings.Where(b => b.Id != excludedBookingId.Value);
